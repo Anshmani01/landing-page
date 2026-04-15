@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Landing</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:12px 30px;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.nav-links a{
+  margin:0 10px;
+  font-size:13px;
+  color:#ccc;
+  text-decoration:none;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  height:85vh;
+  background:url("images/hero.png") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+}
+
+.content{
+  position:relative;
+  z-index:2;
+}
+
+h1{
+  font-size:50px;
+}
+
+p{
+  margin:10px 0 20px;
+  color:#bbb;
+}
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:10px 22px;
+  font-size:14px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.btn-primary{
+  background:#ff6a00;
+  color:#fff;
+}
+
+.btn-secondary{
+  border:1px solid #555;
+  color:#fff;
+}
+
+/* STRIP */
+.strip{
+  display:flex;
+  justify-content:space-around;
+  padding:20px;
+  background:#111;
+  font-size:14px;
+}
+
+/* PRODUCTS */
+.products{
+  padding:40px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:#1a1a1a;
+}
+
+/* ✅ FIXED IMAGE STYLE */
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;   /* 🔥 FIX */
+  background:radial-gradient(circle,#111,#000);
+  padding:15px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover img{
+  transform:scale(1.08);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:40px 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div><b></b></div>
+  <div class="nav-links">
+    <a href="#">Store</a>
+    <a href="#">Mac</a>
+    <a href="#">iPhone</a>
+    <a href="#">iPad</a>
+    <a href="#">Support</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="content">
+    <h1>THE FUTURE IS HERE</h1>
+    <p>Discover powerful Apple innovation</p>
+
+    <div class="buttons">
+      <a href="https://www.apple.com" target="_blank" class="btn btn-primary">Learn More</a>
+      <a href="https://www.apple.com/store" target="_blank" class="btn btn-secondary">Buy Now</a>
+      <a href="#" class="btn btn-secondary">Watch</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="strip">
+  <div>⚡ A17 Pro Chip</div>
+  <div>🔋 All-day Battery</div>
+  <div>📸 48MP Camera</div>
+  <div>🔐 Face ID Security</div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/iphone.jpg" alt="iPhone">
+      <h3>iPhone</h3>
+      <p>Advanced performance</p>
+      <a href="https://www.apple.com/iphone" target="_blank" class="btn btn-primary">View</a>
+    </div>
+
+    <div class="card">
+      <img src="images/mac.webp" alt="MacBook">
+      <h3>MacBook</h3>
+      <p>Supercharged power</p>
+      <a href="https://www.apple.com/mac" target="_blank" class="btn btn-primary">View</a>
+    </div>
+
+    <div class="card">
+      <img src="images/ipad.jpg" alt="iPad">
+      <h3>iPad</h3>
+      <p>Versatile device</p>
+      <a href="https://www.apple.com/ipad" target="_blank" class="btn btn-primary">View</a>
+    </div>
+
+    <div class="card">
+      <img src="images/watch.jpg" alt="Apple Watch">
+      <h3>Apple Watch</h3>
+      <p>Smart lifestyle</p>
+      <a href="https://www.apple.com/watch" target="_blank" class="btn btn-primary">View</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Experience Innovation Today</h2>
+  <br>
+  <a href="https://www.apple.com" target="_blank" class="btn btn-primary">Explore Now</a>
+</section>
+
+</body>
+</html>
